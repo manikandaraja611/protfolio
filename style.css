@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,50..700;1,50..700&family=Roboto:ital,wght@0,50..900;1,50..900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+nav{
+    background-color: #090040;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.5);
+}
+ .nav-link{
+    border-bottom: 1px solid transparent;
+ }
+.nav-link:hover{
+border-bottom: 1px solid white;
+}
+.box{
+   min-width: 100%;
+    min-height: 100vh;
+   background-color:#8F87F1;
+   padding-top: 9%;
+}
+.box h1{
+    text-align: left;
+}
+.box h5{
+     text-align: left;
+}
+ 
+
+#Home{
+  background-color: #8F87F1;
+  min-height: 100vh;
+  min-width:100%;
+}
+
+
+.ft{
+  font-size: 40px;
+  font-weight: 700;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Mono&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.trt{
+  padding-top: 50px;
+  text-align: justify;
+   font-weight: 900;
+  font-style: normal;
+   font-family: "Bebas Neue", sans-serif;
+   font-size: medium;
+}
+
+
+.mk{
+  font-size: 28px;
+ font-weight: 900;
+  background: -webkit-linear-gradient(25deg, #065084, #320A6B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
+  position: relative;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-color: transparent;
+  }
+}
+
+#ani h1{
+    font-weight: 700;
+     position: absolute;
+      opacity: 0;
+      animation: text 4s ease-in-out;
+      animation-iteration-count: infinite;
+      color:#092635;
+      text-shadow: 0px 0px  10px #474E93 ;
+}
+#ani h1:nth-child(1){
+    animation-delay: 0s;
+}
+#ani h1:nth-child(2){
+    animation-delay: 2s;
+}
+ @keyframes text {
+      50% {
+        opacity: 0;
+      }
+       100% {
+        opacity: 1;}
+       }
+
+@media screen and (max-width:576px){
+  #ani h1{
+    font-size: 25px;
+
+  }
+}
+
+.id{
+  font-weight: 700;
+  font-size: 40px;
+
+}
+
+
+.img-thumbnail{
+  box-shadow: 0px 0px 80px #23486A;
+}
+
+
+
+
+#About{
+  background-color: #8F87F1;
+  min-width: 100%;
+  min-height: 100vh;
+  padding-top: 10%;
+ }
+
+
+.At{
+  font-weight: 900;
+  color:#131D4F;
+  text-align: left;
+  }
+.Ak{
+    text-align: justify;
+    font-weight: 600;
+    font-size: 18px;
+
+  }
+.og{
+  font-size: 20px;
+  font-weight: 600;
+}
+.head{
+  font-weight: 900;
+  color:#131D4F;
+  text-align: left;
+}
+ .txrt{
+  font-size: 18px;
+  text-align: left;
+ }
+
+ #skills{
+  background-color:#8F87F1;
+  min-height: 100vh;
+  min-width: 100%;
+ }
+ .ftu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+@media screen and (max-width:768px) {
+ .ftu {
+    flex-wrap:wrap;
+}
+
+}
+.tvk{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ @media screen and (max-width:768px){
+ .tvk {
+    flex-wrap:wrap;
+}
+
+}
+
