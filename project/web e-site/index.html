@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS Store — Premium Shopping Experience</title>
+  <meta name="description" content="Shop the latest premium products at NEXUS Store. Discover top brands in fashion, electronics, and accessories with exclusive deals and fast shipping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NOTIFICATION BAR ===== -->
+  <div class="notif-bar" id="notifBar">
+    <span>🚀 Free shipping on orders over $75 &nbsp;|&nbsp; Use code <strong>NEXUS20</strong> for 20% off</span>
+    <button class="notif-close" id="notifClose" aria-label="Close notification">✕</button>
+  </div>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header" id="header">
+    <div class="header-inner container">
+      <a href="#" class="logo" id="logoLink">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">NEXUS</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#products" class="nav-link">Shop</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#deals" class="nav-link">Deals</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="badge" id="wishlistBadge">0</span>
+        </button>
+        <button class="icon-btn cart-btn" id="cartToggle" aria-label="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="search-inner container">
+        <input type="text" id="searchInput" placeholder="Search for products, brands, categories…" autocomplete="off" />
+        <button class="search-submit" id="searchSubmit">Search</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </header>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <span>🛍️</span>
+        <p>Your cart is empty</p>
+        <small>Add some products to get started</small>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-subtotal">
+        <span>Subtotal</span><span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-shipping">
+        <span>Shipping</span><span id="cartShipping">Free</span>
+      </div>
+      <div class="cart-total">
+        <span>Total</span><span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Proceed to Checkout →</button>
+      <button class="btn btn-ghost btn-full" id="continueShoppingBtn">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="container hero-content">
+      <div class="hero-tag">✦ New Season 2026</div>
+      <h1 class="hero-title">
+        Discover Your<br/>
+        <span class="gradient-text">Perfect Style</span>
+      </h1>
+      <p class="hero-subtitle">Explore thousands of premium products curated just for you. Fashion, tech, and lifestyle — all in one place.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-primary btn-lg">Shop Now →</a>
+        <a href="#categories" class="btn btn-ghost btn-lg">Explore Categories</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>50K+</strong><span>Products</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>200K+</strong><span>Customers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>4.9★</strong><span>Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-dot"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BADGES ===== -->
+  <section class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item">
+        <span class="trust-icon">🚚</span>
+        <div><strong>Free Shipping</strong><small>On orders over $75</small></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🔄</span>
+        <div><strong>Easy Returns</strong><small>30-day return policy</small></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🔒</span>
+        <div><strong>Secure Payment</strong><small>256-bit SSL encryption</small></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🎧</span>
+        <div><strong>24/7 Support</strong><small>Always here to help</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Browse</span>
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-sub">Find exactly what you're looking for</p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="section dark-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured</span>
+        <h2 class="section-title">Trending Now</h2>
+        <p class="section-sub">Handpicked premium products for you</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="footwear">Footwear</button>
+        <button class="filter-btn" data-filter="electronics">Electronics</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+        <button class="filter-btn" data-filter="apparel">Apparel</button>
+        <div class="filter-sort">
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn btn-ghost btn-lg" id="loadMoreBtn">Load More Products</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEALS BANNER ===== -->
+  <section class="deals-banner" id="deals">
+    <div class="deals-bg"></div>
+    <div class="container deals-content">
+      <div class="deals-text">
+        <span class="deals-tag">⚡ Flash Sale</span>
+        <h2>Up to <span class="gradient-text">60% OFF</span></h2>
+        <p>Limited time deals on premium products. Don't miss out!</p>
+        <div class="countdown" id="countdown">
+          <div class="countdown-unit"><span id="cdHours">00</span><small>Hours</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit"><span id="cdMins">00</span><small>Mins</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit"><span id="cdSecs">00</span><small>Secs</small></div>
+        </div>
+        <a href="#products" class="btn btn-primary btn-lg">Shop Deals Now</a>
+      </div>
+      <div class="deals-promo-code">
+        <div class="promo-card">
+          <p>Use code for extra 20% OFF</p>
+          <div class="promo-code-box">
+            <span>NEXUS20</span>
+            <button id="copyCode">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">What Customers Say</h2>
+        <p class="section-sub">Thousands of happy shoppers</p>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section">
+    <div class="container newsletter-inner">
+      <div class="newsletter-text">
+        <h2>Stay in the Loop</h2>
+        <p>Get exclusive deals, new arrivals, and style tips delivered straight to your inbox.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email address…" required />
+        <button type="submit" class="btn btn-primary">Subscribe ✦</button>
+      </form>
+      <p class="newsletter-note" id="newsletterMsg"></p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">NEXUS</span>
+        </a>
+        <p>Your destination for premium products and exceptional shopping experiences.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Sale & Deals</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Lookbook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 NEXUS Store. All rights reserved.</p>
+      <div class="payment-icons">
+        <span>💳</span><span>💵</span><span>🏦</span><span>📱</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== PRODUCT MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="product-modal" id="productModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay" id="checkoutOverlay">
+    <div class="checkout-modal" id="checkoutModal">
+      <button class="modal-close" id="checkoutClose">✕</button>
+      <div class="checkout-body">
+        <h2>Checkout</h2>
+        <div class="checkout-steps">
+          <span class="step active">1. Details</span>
+          <span class="step-line"></span>
+          <span class="step">2. Shipping</span>
+          <span class="step-line"></span>
+          <span class="step">3. Payment</span>
+        </div>
+        <form id="checkoutForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="firstName" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="lastName" placeholder="Doe" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="checkoutEmail" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Shipping Address</label>
+            <input type="text" id="address" placeholder="123 Main Street" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" id="city" placeholder="New York" required />
+            </div>
+            <div class="form-group">
+              <label>ZIP Code</label>
+              <input type="text" id="zip" placeholder="10001" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Card Number</label>
+            <input type="text" id="cardNum" placeholder="**** **** **** ****" maxlength="19" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Expiry</label>
+              <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required />
+            </div>
+            <div class="form-group">
+              <label>CVV</label>
+              <input type="text" id="cvv" placeholder="***" maxlength="3" required />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full checkout-submit">Place Order 🎉</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="app.js"></script>
+</body>
+</html>

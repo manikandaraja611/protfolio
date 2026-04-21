@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}My Blog - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-container">
+        <h1>Welcome to My Blog</h1>
+        <p>Discover insights, stories, and ideas that matter</p>
+    </div>
+</section>
+
+<section class="posts-section">
+    <div class="container">
+        <h2>Latest Posts</h2>
+        <div class="posts-grid">
+            {% for post in posts.items %}
+            <article class="post-card">
+                <div class="post-content">
+                    <h3><a href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h3>
+                    <p class="post-excerpt">{{ post.excerpt }}</p>
+                    <div class="post-meta">
+                        <span class="author">By {{ post.author }}</span>
+                        <span class="date">{{ post.created_date.strftime('%B %d, %Y') }}</span>
+                        {% if post.tags %}
+                        <div class="tags">
+                            {% for tag in post.tags.split(',') %}
+                            <span class="tag">{{ tag.strip() }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <a href="{{ url_for('post', post_id=post.id) }}" class="read-more">Read More</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if posts.has_prev or posts.has_next %}
+        <div class="pagination">
+            {% if posts.has_prev %}
+            <a href="{{ url_for('index', page=posts.prev_num) }}" class="page-link">&laquo; Previous</a>
+            {% endif %}
+
+            <span class="page-info">Page {{ posts.page }} of {{ posts.pages }}</span>
+
+            {% if posts.has_next %}
+            <a href="{{ url_for('index', page=posts.next_num) }}" class="page-link">Next &raquo;</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}</content>
+<parameter name="filePath">c:\Users\mmani\Documents\protfolio\project\blog\templates\index.html

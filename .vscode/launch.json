@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Flask Blog",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/project/blog/app.py",
+      "cwd": "${workspaceFolder}/project/blog",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "FLASK_ENV": "development"
+      }
+    }
+  ]
+}

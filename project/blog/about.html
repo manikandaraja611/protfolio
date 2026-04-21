@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - DevVibe Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">DevVibe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="blog4.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h1>About This Blog</h1>
+    <p>DevVibe Blog is a space to share coding knowledge, tutorials, and creative thoughts about technology and design.</p>
+    <p>We aim to inspire beginners and support developers by providing easy-to-follow articles and resources.</p>
+  </div>
+  
+  <!-- Expanded About Sections -->
+  <section id="mission" class="bg-light py-5">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>To make learning web development approachable, practical, and fun. We publish clear tutorials, project ideas, and best practices.</p>
+    </div>
+  </section>
+
+  <section id="topics" class="py-5">
+    <div class="container">
+      <h2>Topics We Cover</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Frontend</h5>
+          <p>HTML, CSS, JavaScript, frameworks, performance and accessibility.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Backend</h5>
+          <p>APIs, databases, authentication, deployment, and server-side frameworks.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>DevOps & Tooling</h5>
+          <p>Docker, CI/CD, testing, and productivity tips for developers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="bg-light py-5">
+    <div class="container">
+      <h2>Meet the Team</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="https://picsum.photos/200" class="rounded-circle mb-2" alt="team1">
+          <h5>Alex</h5>
+          <p>Developer & Writer</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="https://picsum.photos/201" class="rounded-circle mb-2" alt="team2">
+          <h5>Sam</h5>
+          <p>Designer & Frontend</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="https://picsum.photos/202" class="rounded-circle mb-2" alt="team3">
+          <h5>Lee</h5>
+          <p>DevOps & Backend</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2>Skills & Tools</h2>
+      <p>We frequently use and teach: Python, JavaScript, TypeScript, React, Django, Docker, Git, and testing frameworks.</p>
+      <div class="progress" style="height: 14px;">
+        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Frontend 80%</div>
+      </div>
+      <div class="progress mt-2" style="height: 14px;">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Backend 70%</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you'd like to contribute or have a suggestion, send us a message below.</p>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="btn btn-primary" style="position:fixed;right:20px;bottom:20px;display:none;">↑</button>
+
+  <script>
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) btn.style.display = 'block'; else btn.style.display = 'none';
+    });
+    btn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+</body>
+</html>
